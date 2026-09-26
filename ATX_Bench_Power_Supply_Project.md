@@ -48,9 +48,15 @@
 * **Branch-Protection:** Inline fast-blow fuses were selected to protect both the external wiring and the binding posts. The +3.3 V, +5 V, and +12 V rails are fused at 10 A to prevent terminal melting. The -12 V rail is fused at 0.5 A to protect the sensitive 0.8 A source limit.
 * **Conductor Sizing:** The internal ATX wiring use standard 18 AWG stranded copper wire. A 18 AWG chassis wiring is rated for a maximum of 16 A. By limiting the main rails to 10 A via fuses.the conductors operate safely within their thermal ampacity limits with an adequate safety margin.
 * **Converter Input Current Estimate:** The buck-boost module (fed by the +12 V rail) steps voltage up or down. Assuming a worst-case scenario where the user requests 24 V at 1.5 A with a typical module efficiency ($\eta$) of 85%:
+
+
 $$I_{in} \approx \frac{V_{out}I_{out}}{\eta V_{in}}$$
 $$I_{in} \approx \frac{24 \times 1.5}{0.85 \times 12} \approx 3.53 \text{ A}$$
+
+
 * **Thermal & Loss:** Assuming a slightly degraded contact resistance of $0.01\ \Omega$ at the binding posts, the power dissipation at a maximum sustained load of 10 A is calculated as:
+
+
 $$P_{loss} = I^2R$$
 $$P_{loss} = 10^2 \times 0.01 = 1 \text{ W}$$
 
